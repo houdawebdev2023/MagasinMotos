@@ -1,0 +1,16 @@
+<nav class= "navbar navbar-expand-md navbar-dark bg-dark">
+            <div class = "container-fluid">
+             <a class = "navbar-brand" href={{ url('home') }}>Ma Moto</a>
+            <ul class = "navbar-nav me-auto">
+            <li class='nav-item'>
+            <a class = "nav-link {{ app.current_route == 'home' ? 'active' : '' }}" href={{ path('home') }}>Accueil</a>
+            </li>
+            <li class = 'nav-item'>
+            <a class = "nav-link {{ app.current_route starts with 'app_moto_' ? 'active' : '' }}" href={{ path('app_moto_index') }}>Liste des motos</a>
+            </li>
+            <li class = 'nav-item'>
+            <a class = "nav-link {{ app.current_route starts with 'app_moto_' ? 'active' : '' }}" href={{ path('app_moto_create') }}>Ajout d'une nouvelle moto</a>
+            </li>
+            </ul> 
+            </div>
+</nav>

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{# {% block title %}Liste des recettes{% endblock %} #}
+{% block marque %}# {{moto.id}}{{moto.nom}}{% endblock %}
+
+{% block body %}
+<h3>Bienvenue sur la moto numéro {{moto.id}}</h3>
+<h4> Le prix de la moto {{moto.marque}} </h4>
+<h6>{{moto.prix}} Euros</h6>
+<br>
+{% endblock %}

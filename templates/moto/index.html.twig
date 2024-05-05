@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des motos{% endblock %}
+
+{% block body %}
+<h3>Nos motos</h3>
+<div class="row">
+    {% for moto in motos %}
+        <div class="card max-w-sm col-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 my-8 mr-4" data-type="post">
+        <h2><a href={{ path ('app_moto_show', {id:moto.id(),nom:moto.nom()})}}>{{ moto.marque() }}</a></h2>
+        {# <img src=""> #}
+
+        {% else %}
+        <p>Pas encore de moto</p>
+        {% endfor %}
+    
+{% endblock %}
